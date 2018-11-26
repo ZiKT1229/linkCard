@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#option {
+    margin: auto;
+    width: 60%;
+}
+
+#start {
+    width: 120px;
+    font-size: 40px; 
+    text-align: center;
+    margin: auto;
+    background: greenyellow;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start:hover {
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px black;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card {
+    width: 120px;
+    height: 180px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px auto 10px auto;
+    background: white;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 800px) {
+    .card {
+        width: 60px;
+        height: 90px;
+    }
+}
+
+.card:hover {
+    box-shadow: 0 0 40px whitesmoke;
+}
+
+.front {
+    z-index: 8;
+    transform: rotateY(180deg);
+}
+
+.cardHide {
+    visibility: hidden;
+}
+
+.card1 {
+    background: url(images/Venusaur.png) 0 0 no-repeat white;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.card2 {
+    background: url(images/Charizard.png) 0 0 no-repeat white;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.card3 {
+    background: url(images/Blastoise.png) 0 0 no-repeat white;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.card4 {
+    background: url(images/Garchomp.png) 0 0 no-repeat white;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.card5 {
+    background: url(images/Metagross.png) 0 0 no-repeat white;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.card6 {
+    background: url(images/Mew.png) 0 0 no-repeat white;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.back {
+    z-index: 10;
+    transform: rotateY(0deg);
+    background: url(images/pokeball.png) 0 0 no-repeat white;
+    background-position: 50%;
+    background-size: 100%;
+    cursor: pointer;
+}
