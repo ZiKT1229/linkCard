@@ -46,7 +46,14 @@ let count = card.length / 2;
 let arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 arr.sort(function(a, b){return 0.5 - Math.random()});
 
-for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener('click', turn);
-    card[i].classList.add(`card${arr[i]}`);
+function startGame() {
+    arr.sort(function(a, b){return 0.5 - Math.random()});
+    for (let i = 0; i < card.length; i++) {
+        card[i].addEventListener('click', turn);
+        card[i].classList.add(`card${arr[i]}`);
+        card[i].classList.replace("front", "back");
+        card[i].classList.replace("cardHide", "cardShow");
+    }
 }
+
+document.getElementById("start").addEventListener('click', startGame);
